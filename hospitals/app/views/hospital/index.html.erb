@@ -1,2 +1,37 @@
-<h1>Hospital#index</h1>
-<p>Find me in app/views/hospital/index.html.erb</p>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<h1>Panel Hospital</h1>
+
+<%= form_for :consulta, url: hospital_procesar_path do |f|%>
+  <div class="form-group jumbotron container">
+      <h3 id="h1T">Hola, introduce el hospital y la accion que deseas realizar</h3>
+   <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <div class="row">
+
+        <div class="col-lg-6">
+          <p>
+           <%= f.label :id %><br>
+           <%= f.text_field :id, required: true %>
+           </p>
+           <p>
+             <%= f.radio_button :accion, '0', required: true%>
+             <%= label_tag(:accion_decrementa, "Salida de paciente")%> <br>
+               <%= f.radio_button :accion, '1', required: true%>
+               <%= label_tag(:accion_incrementa, "Entrada de paciente")%>
+           </p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+
+          <p>
+          <%= f.submit("Actualizar") %>
+          </p>
+          <% end %>
