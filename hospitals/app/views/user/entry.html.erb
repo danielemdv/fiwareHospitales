@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body onload="getLocation();">
+
+<%= form_for :uploadLocation, url: user_magia_path do |f|%>
+
+  <p>
+  <%= f.label :coordinates %>
+  <%= f.text_field :coordinates, required: true, id: "coordinates"%>
+  </p>
+  <%= f.submit("Mandar ubicacion") %>
+
+<% end %>
+
+<script>
+var x = document.getElementById("coordinates");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else {
+        x.value = "Geolocation is not supported by this browser.";}
+    }
+
+function showPosition(position) {
+    x.value = position.coords.latitude + "," + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

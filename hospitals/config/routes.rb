@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  #USER--------
+  get 'user/entry' => 'user#entry'
+  post 'user/magia' => 'user#magia'
 
+  #HOSPITAL---------
   get 'hospital/index' => 'hospital#index'
   post 'hospital/procesar' => 'hospital#procesar'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
