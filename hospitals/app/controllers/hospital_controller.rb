@@ -1,4 +1,5 @@
-require 'HTTPClient'
+#require 'HTTPClient'
+require 'httpclient'
 require 'rest-client'
 
 class HospitalController < ApplicationController

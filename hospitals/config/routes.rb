@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #general
+  get "/" => 'user#entry'
+
   #USER--------
   get 'user/entry' => 'user#entry'
   post 'user/magia' => 'user#magia'
