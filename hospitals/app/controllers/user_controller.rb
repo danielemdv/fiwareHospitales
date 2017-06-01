@@ -107,7 +107,7 @@ class UserController < ApplicationController
 
 
     mapsURL = 'https://www.google.com/maps/dir/?api=1&origin=' + compound + '&destination=' +coordenadasMejorHospital
-
+    reset_session
     redirect_to(mapsURL)
 
 
