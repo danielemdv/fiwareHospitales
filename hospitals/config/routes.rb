@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #USER--------
   get 'user/entry' => 'user#entry'
   post 'user/magia' => 'user#magia'
+  get 'user/appmagic' => 'user#appmagic'
 
   #HOSPITAL---------
   get 'hospital/index' => 'hospital#index'
