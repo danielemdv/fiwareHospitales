@@ -81,11 +81,16 @@ class UserController < ApplicationController
     #(100-capacidad)*tiempoAtencion+tiempotraslado
     #tiempoAtencion 25.4 minutos
 
+    puts "CALCULO FUNCION"
+
     ponderaciones = Array.new
     for i in 0..3
-      p = (100-capacidades[i])*25.4+(tiempos[i]/60)
+      #p = (100-capacidades[i])*25.4+(tiempos[i]/60)
+      p = (capacidades[i] * 0.1) + (tiempos[i]/60)
       ponderaciones << p
     end
+
+    puts ponderaciones
 
     idMejorHospital = 0
     minActual = 100000
@@ -195,11 +200,16 @@ https://maps.googleapis.com/maps/api/directions/json?origin=19.344935,-99.199929
     #(100-capacidad)*tiempoAtencion+tiempotraslado
     #tiempoAtencion 25.4 minutos
 
+    puts "CALCULO FUNCION!!!!"
+
     ponderaciones = Array.new
     for i in 0..3
-      p = (100-capacidades[i])*25.4+(tiempos[i]/60)
+      #p = (100-capacidades[i])*25.4+(tiempos[i]/60)
+      p = (capacidades[i] * 0.1) + (tiempos[i]/60)
       ponderaciones << p
     end
+
+    puts ponderaciones
 
     idMejorHospital = 0
     minActual = 100000
