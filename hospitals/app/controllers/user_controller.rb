@@ -235,4 +235,7 @@ https://maps.googleapis.com/maps/api/directions/json?origin=19.344935,-99.199929
 
   end
 
+  def mapa
+  end
+
 end
